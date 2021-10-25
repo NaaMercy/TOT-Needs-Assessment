@@ -12,7 +12,7 @@ String recipeModelToJson(List<RecipeModel> data) =>
 
 class RecipeModel {
   RecipeModel({
-    required this.id,
+     this.id,
     required this.title,
     required this.category,
     required this.rate,
@@ -21,7 +21,7 @@ class RecipeModel {
     required this.ingredents,
   });
 
-  int id;
+  int? id;
   String title;
   String category;
   double rate;
