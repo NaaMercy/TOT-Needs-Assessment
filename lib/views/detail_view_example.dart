@@ -12,12 +12,27 @@ class DetialViewExample extends StatefulWidget {
   final RecipeModel recipeModel;
 
   @override
-  State<DetialViewExample> createState() => _DetialViewExampleState();
+  _DetialViewExampleState createState() => _DetialViewExampleState();
 }
+
 
 class _DetialViewExampleState extends State<DetialViewExample> {
   final BookmarkManager bookmarkManager = BookmarkManager();
   bool _isBookmarked = false;
+
+Future<void> getStatus() async {
+    bool res = await bookmarkManager.isBookmarked(widget.recipeModel);
+    print('is checked: $res');
+    setState(() {
+      _isBookmarked = res;
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    getStatus();
+  }
 
   @override
   Widget build(BuildContext context) {
