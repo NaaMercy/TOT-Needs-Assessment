@@ -12,7 +12,7 @@ String recipeModelToJson(List<RecipeModel> data) =>
 
 class RecipeModel {
   RecipeModel({
-     this.id,
+    required this.id,
     required this.title,
     required this.category,
     required this.rate,
@@ -41,7 +41,7 @@ class RecipeModel {
       );
 
   Map<String, dynamic> toJson() => {
-        "id": id,
+        //"id": id,
         "title": title,
         "category": category,
         "rate": rate,
