@@ -44,8 +44,7 @@ class BookmarkView extends StatelessWidget {
                     _bookmarkController.removeBookmark(recipeModel.id!);
                   },
                   icon: const Icon(Icons.delete),
-                  // onTap: () {
-                  // bookmarkController.removeBookmark(recipeModel.id!);
+                  
                 ),
               );
             },
